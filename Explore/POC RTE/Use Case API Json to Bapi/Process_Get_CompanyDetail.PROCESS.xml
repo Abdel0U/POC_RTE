@@ -1,0 +1,118 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>3IH0Fdw8jIw8jIw-gt-13964059-2022-03-15T09:32:19.886Z::pd.xml</types1:EntryId>
+      <types1:Name>Process_Get_CompanyDetail-1</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>yijian258@gmail.com</types1:CreatedBy>
+      <types1:CreationDate>2022-03-15T09:32:20Z</types1:CreationDate>
+      <types1:ModifiedBy>bertrand.duong@cgi.com</types1:ModifiedBy>
+      <types1:ModificationDate>2022-03-22T16:12:27Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>bertrand.duong@cgi.com</types1:PublishedBy>
+      <types1:PublicationDate>2022-03-22T16:12:33Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Process_Get_CompanyDetail-1/Process_Get_CompanyDetail-1.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Process_Get_CompanyDetail"
+                  name="Process_Get_CompanyDetail-1"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description=""
+                          name="CompanyCode"
+                          required="true"
+                          type="reference">
+                  <options>
+                     <option name="referenceTo">BAPICompanyConnection-1:BAPI_COMPANYCODE_GETDETAIL_INPUT</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">ciyGT5OVqEVe8xSnD9pleF</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="Output" type="reference">
+                  <options>
+                     <option name="referenceTo">BAPICompanyConnection-1:BAPI_COMPANYCODE_GETDETAIL_OUTPUT</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">ciyGT5OVqEVe8xSnD9pleF</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+                  <wholePayload outputWholePayload="true"/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l0jrhpiu" targetId="l0jrhpit"/>
+               </start>
+               <service id="l0jrhpit">
+                  <title>BAPI_CompanyCode_GetDetail</title>
+                  <serviceName>BAPICompanyConnection-1:BAPI_COMPANYCODE_GETDETAIL</serviceName>
+                  <serviceGUID>ciyGT5OVqEVe8xSnD9pleF</serviceGUID>
+                  <serviceInput>
+                     <parameter name="BAPI_COMPANYCODE_GETDETAIL_INPUT" source="field">input.CompanyCode</parameter>
+                  </serviceInput>
+                  <link id="l10v18a7" targetId="l10v18a6"/>
+               </service>
+               <assignment id="l10v18a6">
+                  <title>Assignment to Response</title>
+                  <operation source="field" to="output.Output">output.BAPI_COMPANYCODE_GETDETAIL_OUTPUT</operation>
+                  <link id="l10v18a8" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>63713653-f499-475e-be41-a43c64b7cea2</ns1:Id>
+               <ns1:Name>Test Bapi</ns1:Name>
+               <ns1:CreatedBy>bertrand.duong@cgi.com</ns1:CreatedBy>
+               <ns1:CreationDate>2022-03-16T16:28:55Z</ns1:CreationDate>
+               <ns1:ModifiedBy>bertrand.duong@cgi.com</ns1:ModifiedBy>
+               <ns1:ModifiedDate>2022-03-16T16:35:22Z</ns1:ModifiedDate>
+               <ns1:Data format="json">{
+	 "CompanyCode": "0001"
+}</ns1:Data>
+            </ns1:SampleData>
+            <ns1:SampleData>
+               <ns1:Id>d99d6814-87e9-44e5-bcc7-50d5861382b1</ns1:Id>
+               <ns1:Name>Test Bapi Get</ns1:Name>
+               <ns1:CreatedBy>bertrand.duong@cgi.com</ns1:CreatedBy>
+               <ns1:CreationDate>2022-03-17T09:53:51Z</ns1:CreationDate>
+               <ns1:ModifiedBy>bertrand.duong@cgi.com</ns1:ModifiedBy>
+               <ns1:ModifiedDate>2022-03-17T09:55:25Z</ns1:ModifiedDate>
+               <ns1:Data format="json">{
+	 "CompanyCode": {
+	 	 "Import": {
+	 	 	 "COMPANYCODEID": "1210"
+	 	 }
+	 }
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>82Ba3gCnPO8ggdwwb2GhSK</types1:GUID>
+      <types1:DisplayName>Process_Get_CompanyDetail</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2022-03-27T12:28:21.389Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

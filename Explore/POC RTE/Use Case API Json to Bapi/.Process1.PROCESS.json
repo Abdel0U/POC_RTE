@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "1SCLJ4hoYoIe1JPdo9j4sl",
+    "name" : "Process1",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "EvHWOMzeHbcjqbd-gt-16206852-2022-03-17T10:35:03.149Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "ciyGT5OVqEVe8xSnD9pleF",
+    "name" : "BAPICompanyConnection",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "EvHWOMzeHbcjqbd-gt-12536841-2022-03-15T13:57:25.493Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/POC RTE/Use Case API Json to Bapi"
+  } ]
+}

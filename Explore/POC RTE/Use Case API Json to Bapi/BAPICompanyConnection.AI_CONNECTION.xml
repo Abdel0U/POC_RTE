@@ -1,0 +1,61 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>EvHWOMzeHbcjqbd-gt-12536841-2022-03-15T13:57:25.493Z::conn.xml</types1:EntryId>
+      <types1:Name>BAPICompanyConnection-1</types1:Name>
+      <types1:ParentFlowIds>3IH0Fdw8jIw8jIw-gt-13964059-2022-03-15T09:32:19.886Z::pd.xml,3zymbduaa-gt-15634961-2022-03-16T17:14:10.874Z::pd.xml,EvHWOMzeHbcjqbd-gt-16206852-2022-03-17T10:35:03.149Z::pd.xml,hCVf4VQT53nQciS-gt-11840249-2022-03-14T18:13:52.121Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:FR-L5378026</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>bertrand.duong@cgi.com</types1:CreatedBy>
+      <types1:CreationDate>2022-03-15T13:57:25Z</types1:CreationDate>
+      <types1:ModifiedBy>bertrand.duong@cgi.com</types1:ModifiedBy>
+      <types1:ModificationDate>2022-03-15T13:59:00Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>bertrand.duong@cgi.com</types1:PublishedBy>
+      <types1:PublicationDate>2022-03-16T15:21:39Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/BAPICompanyConnection-1/BAPICompanyConnection-1.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="BAPICompanyConnection"
+                     label="BAPICompanyConnection-1"
+                     name="BAPICompanyConnection-1">
+            <description/>
+            <tags>.agent:FR-L5378026</tags>
+            <agent>FR-L5378026</agent>
+            <attributes>
+               <attribute encrypted="false" name="Username" value="RFC_IICS_001"/>
+               <attribute encrypted="true" name="Password" value=""/>
+               <attribute encrypted="false" name="Host Name" value="10.0.18.36"/>
+               <attribute encrypted="false" name="Client" value="100"/>
+               <attribute encrypted="false" name="Language" value="EN"/>
+               <attribute encrypted="false" name="System Number" value="01"/>
+               <attribute encrypted="false" name="Trace" value="true"/>
+               <attribute encrypted="false" name="SAP Additional Parameters" value=""/>
+               <attribute encrypted="false" name="Jco Trace" value="false"/>
+               <attribute encrypted="false"
+                          name="Object Filter"
+                          value="BAPI_COMPANYCODE_GETDETAIL"/>
+            </attributes>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="ICSX"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           type="bapi"
+                           uuid="d8072d25-f006-47f4-8bfb-0a6d75765a63">
+               <description>SAP BAPI</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>ciyGT5OVqEVe8xSnD9pleF</types1:GUID>
+      <types1:DisplayName>BAPICompanyConnection</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2022-03-27T12:28:21.219Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
